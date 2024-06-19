@@ -1,0 +1,36 @@
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 30px;
+}
+
+#player1 {
+    background-color: #ff0000;
+    text-align: center;
+    padding: 100px;
+}
+
+#player2 {
+    background-color: #0000ff;
+    text-align: center;
+    padding: 100px;
+}
+
+p {
+    font-size: 30px;
+    color: #fff;
+    outline: none;
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 100px;
+    color: #fff;
+}
