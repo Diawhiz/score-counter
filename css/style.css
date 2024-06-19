@@ -4,11 +4,23 @@ body {
     padding: 0;
 }
 
+.timer {
+    background-color: #008000;
+    padding: 5px;
+    margin: 5px 500px -20px 500px;
+    text-align: center;
+}
+
+.timer span {
+    font-size: 20px;
+    padding: 5px;
+}
+
 .container {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    padding: 30px;
+    padding: 20px;
 }
 
 #player1 {
