@@ -13,7 +13,7 @@ const player2P = player2.querySelector('p');
 
 const startTimer = document.getElementById('start');
 const resetTimer = document.getElementById('reset');
-const resetAll = document.getElementById('reset-all');
+//const resetAllCounts = document.getElementById('reset-all');
 
 // Function to handle click events on player elements
 function handlePlayerClick(event, countElement, count) {
@@ -75,11 +75,20 @@ function updateTimerDisplay(seconds) {
         `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 }
 
-resetAll.addEventListener('click', function() {
+function resetAllCounts() {
+    //Resets the counts back to zero
+    count1 = 0;
+    count2 = 0;
+    document.getElementById('count1').innerHTML = 0;
+    document.getElementById('count2').innerHTML = 0;
+
+    //reset the player back to the default
+    player1P.innerHTML = 'player 1'
+    player2P.innerHTML = 'player 2';
+
+
+    //Clears the timer
     clearInterval(timer);
     secondsElapsed = 0;
     updateTimerDisplay(secondsElapsed);
-
-    count1 = 0;
-    count2 = 0;
-});
+};
