@@ -13,6 +13,7 @@ const player2P = player2.querySelector('p');
 
 const startTimer = document.getElementById('start');
 const resetTimer = document.getElementById('reset');
+const resetAll = document.getElementById('reset-all');
 
 // Function to handle click events on player elements
 function handlePlayerClick(event, countElement, count) {
@@ -64,6 +65,7 @@ resetTimer.addEventListener('click', function() {
     updateTimerDisplay(secondsElapsed);
 });
 
+//The function updates timer a
 function updateTimerDisplay(seconds) {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
@@ -72,3 +74,12 @@ function updateTimerDisplay(seconds) {
     document.getElementById('timer').innerText = 
         `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 }
+
+resetAll.addEventListener('click', function() {
+    clearInterval(timer);
+    secondsElapsed = 0;
+    updateTimerDisplay(secondsElapsed);
+
+    count1 = 0;
+    count2 = 0;
+});

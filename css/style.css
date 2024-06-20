@@ -14,6 +14,7 @@ body {
 .timer span {
     font-size: 20px;
     padding: 5px;
+    color: #fff;
 }
 
 .container {
@@ -44,5 +45,18 @@ p {
 
 h1 {
     font-size: 100px;
+    color: #fff;
+}
+
+.reset-all {
+    background-color: #008000;
+    padding: 5px;
+    margin: -20px 500px 0 500px;
+    text-align: center;
+}
+
+.reset-all span {
+    font-size: 20px;
+    padding: 5px;
     color: #fff;
 }
