@@ -2,6 +2,7 @@ let count1 = 0;
 let count2 = 0;
 let timer;
 let secondsElapsed = 0;
+let history = [];
 
 // Get the player elements
 const player1 = document.getElementById('player1');
@@ -25,12 +26,14 @@ function handlePlayerClick(event, countElement, count) {
 // Add click event listener to the first player
 player1.addEventListener('click', function(event) {
     handlePlayerClick(event, document.getElementById('count1'), count1);
+    history.push(count1)
     count1++;
 });
 
 // Add click event listener to the second player
 player2.addEventListener('click', function() {
     handlePlayerClick(event, document.getElementById('count2'), count2);
+    history.push(count2)
     count2++;
 });
 
@@ -92,3 +95,11 @@ function resetAllCounts() {
     secondsElapsed = 0;
     updateTimerDisplay(secondsElapsed);
 };
+
+// function to undo count
+function undoCounts() {
+  if (history.length > 0) {
+    count1 = history.pop();
+    count2 = history.pop();
+  }
+}
